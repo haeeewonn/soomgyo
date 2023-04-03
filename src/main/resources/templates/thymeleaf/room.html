@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<title>Hello WebSocket</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/room.css">
+</head>
+<body>
+	<div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-12" id="col-md-12"></div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" id="message" class="form-control"
+						placeholder="메시지 내용"
+						onKeypress="javascript:if(event.keyCode==13){sendChat()}">
+				</div>
+				<div class="form-btn">
+					<button id="send" class="btn btn-default" onclick="sendChat()">전송</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script th:inline="javascript">
+    
+    var roomId = [[${roomId}]];
+    var chatList = [[${chatList}]];
+    var sender1= [[${sender}]];
+    var img= [[${receiver}]];
+    var objDiv = document.getElementById("col-md-12");
+  function time(difference){
+     
+	  var now = new Date(difference);
+      var nowHour = now.getHours();
+		
+      var nowMt = now.getMinutes();
+	  if(nowMt<10){
+		  if ( nowHour <= 12  &&  nowHour  >= 6 ) {
+
+		       return '오전 ' + nowHour + ':0' + nowMt ;
+
+		      } else if (  nowHour >= 12  &&  nowHour  < 24  ) {
+
+		    	  return '오후 ' + nowHour + ':0' + nowMt ;
+
+		      }
+		  
+	  }
+	  else{
+		  if ( nowHour <= 12  &&  nowHour  >= 6 ) {
+
+		       return '오전 ' + nowHour + ':' + nowMt ;
+
+		      } else if (  nowHour >= 12  &&  nowHour  < 24  ) {
+
+		    	  return '오후 ' + nowHour + ':' + nowMt ;
+
+		      }
+
+		  
+	  }
+    
+
+     
+
+  }  function time2(difference){
+     
+	  var now = new Date(difference);
+      var nowHour = now.getHours();
+	  var nowdate =now.getDate();
+      var nowMt = now.getMinutes();
+
+	
+		  if ( nowHour <= 12  &&  nowHour  >= 6 ) {
+
+		       return 'am' +nowdate+ nowHour  + nowMt ;
+
+		      } else if (  nowHour >= 12  &&  nowHour  < 24  ) {
+
+		    	  return 'pm' +nowdate+ nowHour  + nowMt ;
+
+		      }
+
+		  
+	  
+    
+
+     
+
+  }
+    function connect() {
+    	objDiv.scrollTop = objDiv.scrollHeight;
+        var socket = new SockJS('/stomp/chat');
+        stompClient = Stomp.over(socket);
+        
+        stompClient.connect({}, function (frame) {
+     	
+            loadChat(chatList) 
+
+      
+            stompClient.subscribe('/room/'+roomId, function (chatMessage) {
+            	
+                showChat(JSON.parse(chatMessage.body));
+            });
+        });
+    }
+
+    function disconnect() {
+        if (stompClient !== null) {
+            stompClient.disconnect();
+        }
+        setConnected(false);
+        console.log("Disconnected");
+    }
+
+
+    function sendChat() {
+    	if($("#message").val()==""){
+    		return;
+    	}
+    	objDiv.scrollTop = objDiv.scrollHeight;
+    
+        stompClient.send("/send/"+roomId, {},
+            JSON.stringify({
+                'sender': sender1,
+                'message' : $("#message").val(),
+                
+                    
+            }));
+        document.getElementById("message").value = null;
+        
+    }
+
+    
+    function loadChat(chatList){
+
+        if(chatList != null) {
+            for(chat in chatList) {
+            	var sender=chatList[chat].sender;
+            	var writeDay = new Date(chatList[chat].sendDate);
+            	 if(sender===sender1){
+            		 console.log(chatList[chat].id)
+            		 var num;
+            		 var realtime=$('#s'+num).text();
+            		 
+                     str = "<div class='col-6'>";
+                     str += "<div class='alert alert-secondary'>";
+				
+					 str += "<p class='time' id=s"+chatList[chat].id+">" + time(writeDay) + "</p>";
+						if(realtime==time(writeDay)){
+							$('#s'+num).remove();
+							 str += "<p class='msg'>" + chatList[chat].message  + "</p>";
+		                     str += "</div></div>";
+						}  
+						else{
+							 str += "<p class='msg'>" + chatList[chat].message  + "</p>";
+		                     str += "</div></div>";
+							
+						}
+						num= chatList[chat].id;
+                    
+                     $(".col-md-12").append(str);
+                 }
+         		//받는사람
+                 else{
+                	 var num;
+            		 var realtime=$('#r'+num).text();
+                     str = "<div class='col-7'>";
+                     str += "<div class='alert alert-warning'>";
+                     
+                     if(realtime==time(writeDay)){
+							$('#r'+num).remove();
+							 str += "<p class='msg'>" + chatList[chat].message  + "</p>";
+		                     
+						}  
+						else{
+							
+							str += "<p class='name'>" + chatList[chat].sender +"</p>";
+		                     str += "<p class='msg'>" + chatList[chat].message  + "</p>";
+		                     
+							
+						}
+						num= chatList[chat].id;
+                     str += "<p class='time' id=r"+chatList[chat].id+">" + time(writeDay) + "</p>";
+                     str += "</div></div>";
+                   
+
+                     $(".col-md-12").append(str);
+                 }
+            
+            	 objDiv.scrollTop = objDiv.scrollHeight;
+            }
+        }
+    }
+
+    function showChat(chatMessage) {
+    	
+        var sender = chatMessage.sender;
+        var writeDay = new Date();
+     	var timer = time(writeDay);
+     	var cktime = time2(writeDay);
+     	
+		//보낸사람
+        if(sender===sender1){
+            str = "<div class='col-6'>";
+            str += "<div class='alert alert-secondary'>";
+            str += "<p class='time' id=s" + cktime + ">" + timer + "</p>";
+ 			var text=$("#s"+cktime).text();
+ 			if(text==timer){
+ 				$("#s"+cktime).remove();
+ 			}
+ 				
+            str += "<p class='msg'>" + chatMessage.message + "</p>";
+            str += "</div></div>";
+            $(".col-md-12").append(str);
+            
+          
+            
+        }
+		//받는사람
+        else{
+            str = "<div class='col-7'>";
+            str += "<div class='alert alert-warning'>";
+            var text=$("#r"+cktime).text();
+ 			if(text==timer){
+ 				$("#r"+cktime).remove();
+ 				str += "<p class='msg'>" + chatMessage.message  + "</p>";
+ 				str += "<p class='time' id=r" + cktime + ">" + timer + "</p>";
+ 			}
+ 			else{
+ 				str += "<p class='name'id=name" + cktime + ">" + chatList[chat].sender +"</p> <br><br>";
+ 				str += "<p class='msg'>" + chatMessage.message  + "</p>";
+ 	            str += "<p class='time' id=r" + cktime + ">" + timer + "</p>";
+ 			}
+            str += "</div></div>";
+            $(".col-md-12").append(str);
+        	}
+            
+            			
+        var str = '';
+
+        objDiv.scrollTop = objDiv.scrollHeight;
+    }
+
+	
+
+
+</script>
+<script>
+    //李� �궎硫� 諛붾줈 �뿰寃�
+    window.onload = function (){
+    	objDiv.scrollTop = objDiv.scrollHeight;
+        connect();
+        
+    }
+
+    window.BeforeUnloadEvent = function (){
+        disconnect();
+    }
+</script>
+</html>

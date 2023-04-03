@@ -1,0 +1,220 @@
+
+    #container{
+        margin: 0 auto;
+        width: 70%;
+
+        
+      }
+      #comm_header{
+        display: flex;
+        justify-content: space-between;
+      padding-top: 3.125rem;
+      margin-bottom: 2rem;
+      align-items: flex-end;
+      padding-bottom: 30px;
+      border-bottom:1px solid #ccc ;
+      }
+    
+      .board_write {
+        width: 7.5rem;
+        height: 2.75rem;
+        border-radius: 5px;
+  	
+  
+      }
+      h1{
+        margin: 0;
+      }
+      
+      .comm_menu img {
+        width: 30px;
+        height: 30px;
+      }
+      span{
+        font-size: 1rem;
+      }
+      .comm_menu {
+        display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.3rem;
+	  border-radius:10px;
+      height: 64px;
+        cursor: pointer;
+      
+      }
+      .comm_menu>img{
+        margin-right: 10px;
+      }
+      
+  
+      #comm_main{
+        display: flex;
+        flex-direction: row;
+      }
+      #comm_menu{
+        width: 20%;
+        
+      }
+      #comm_menu_bar li{
+        border-radius: 10px;
+        margin-top:5px;
+      }
+
+  	
+      .comm_board{
+        width: 100%;
+        margin-left: 5%;
+      
+      }
+      .comm_board_ul li{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom:1px solid #ccc ;
+      }
+      .comm_board p{
+        padding-bottom: 10px;
+      }
+      .comm_category{
+        font-size: 0.5rem;
+        color: #ccc;
+      }
+      .comm_title{
+        font-size: 1.3rem;
+      }
+      .comm_content{
+        font-size: 0.8rem;
+        color:#222;
+      }
+      .comm_comment{
+        line-height: 0.84rem;
+        font-size: 0.4rem;
+        
+      }
+      .comm_h1{
+        font-size: 2.2rem;
+        
+      }
+      .comm_board_text{
+        width: 80%;
+      }
+      .comm_board_text img{
+        width: 11px;
+        height: 11px;
+      }
+      .comm_board_img{
+        width: 80px;
+        height: 80px;
+       
+      }
+      .comm_board_img>img{
+      	width: 100%;
+      	height: 100%;
+      }
+      .comm_board_box{
+        display: flex;
+      }
+      .board_write{
+        background-color: #ecd3ce;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        color: #222;
+        cursor: pointer;
+      }
+      #comm_menu_bar :nth-child(1) li:hover{
+      	 transition: all 0.5s;
+      	 background-color: #ecd3ce;
+      }
+      
+      .comm_board_box:hover {
+        background-color: rgb(255, 247, 247);
+        transition: all 0.3s;
+        border-radius: 5px;
+       }
+       #comm_menu_bar {
+        z-index: 9999;
+        position: sticky;
+        top: 0;
+       }
+       .commu_page{
+         	margin-top: 50px;
+         	height: 50px;
+         }
+       .pagination{
+       	display: flex;
+       	justify-content: center;
+       }
+       .page-item{
+       	width: 50px;
+       	height: 100%;
+       	text-align: center;
+       }
+		.page-link{
+			font-size: 20px;
+		}
+       @media all and (max-width:1050px) {
+        #comm_main{
+          flex-direction: column;
+        }
+        #comm_menu {
+          width: 100%;
+          justify-content: center;
+        
+        }
+        .comm_board{
+          width: 100%;
+          margin: 0;
+        }
+    
+        #comm_menu_bar{
+          
+          width: 100%;
+        }
+        #comm_menu_bar li{
+          
+          width:30%;
+          padding-top:5px;
+          padding-bottom:5px;
+          margin-right:1px;
+          margin-top: 0px;
+        }
+        .comm_menu img {
+         margin-left: 10px;
+          width: 30px;
+          height: 30px;
+          margin-bottom: 8px;
+        }
+        .comm_menu {
+          height: 40px;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+        }
+        span{
+          
+          font-size: 0.8rem;
+        }
+        .comm_menu_bar_1 {
+          display: flex;
+          justify-content: space-between;
+ 
+
+        }
+        .comm_board {
+          margin-top: 20px;
+        }
+        #comm_menu{
+          z-index: 2;
+          position: sticky;
+          top: 0;
+          background-color: white;
+         }
+  		
+       }
+       
+  
+
+       
+       
+     

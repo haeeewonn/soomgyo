@@ -1,0 +1,467 @@
+#container{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.member{
+    width: 50%;
+    height: 150px;
+    display: flex;
+    margin-top: 30px;
+}
+.picture{
+    width: 150px;
+    height: 100%;
+}
+.picture>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.info{
+    width: 300px;
+    height: 100%;
+    margin-left: 20px;
+}
+.info_box{
+    width: 100%;
+    height: 50%;
+    margin-top: 30px;
+}
+.info_box>p{
+    line-height: 2;
+    font-size: 20px;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none; 
+    color: #ecd3ce;
+    font-size: 50px
+}
+.wrap{
+    width: 100%;
+    height: 700px;
+    margin-top: 30px;
+}
+.tab_menu{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.is_on{
+    height: 100%;
+    text-align: center;
+}
+.is_on>a{
+    height: 100%;
+    align-items: center;
+    text-align: center;
+   
+}
+.list>li>a{
+	color:  #ecd3ce;
+}
+.tab_menu .list li.is_on .btn{
+    color: #c3abd0;
+}
+.tab_menu .list .btn{
+    font-family: 'Jua', sans-serif;
+    font-size:35px;
+}
+.tab_menu .cont_area .cont{
+    width: 100%;
+    height: 800px;
+    display:none;
+    border-radius: 10px;
+    background-color:  #ecd3ce43;
+}
+.cont_area{
+	margin-top: 30px;
+}
+/*�쉶�썝�젙蹂댁닔�젙 */
+.member_modify_box{
+    width: 90%;
+    height: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.join_modify{
+    width: 40%;
+    height: 100%;
+    border-radius: 30px;
+    margin-top: 45px;
+}
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: 'Jua', sans-serif;
+    background-color: #eeeaea;
+    padding-left: 10px;
+}
+input::placeholder{
+    color: #c9c4c4;
+}
+.join_input>label{
+    font-family: 'Jua', sans-serif;
+    margin-top: 10px;
+}
+label{
+    float: left;
+    color: #828282;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.btn{
+	width: 50%;
+	padding-top:20px;
+}
+.newstu{
+	color:#828282;
+	font-size:3rem;
+	padding-top:50px;
+	padding-bottom:50px;
+	border-bottom:1px solid #828282;
+	text-align: center;
+}
+.btn button{
+	
+	width: 30%;
+	height: 50px;
+	font-size: 1.2rem;
+	border: 2px solid #828282;
+	border-radius: 10px;
+	color:#828282;
+	
+}
+
+.sub_checkbox{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.sub_checkbox label{
+    width: 93%;
+    cursor: pointer;
+}
+.sub_checkbox_box{
+    margin: 20px;
+    border-bottom: solid #828282 ;
+    padding: 15px 0;
+    cursor: pointer;
+}
+/*泥댄겕諛뺤뒪 css*/
+input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    outline: 0;
+    width: 20px;
+    border: 1px solid #bebfc5;
+    border-radius: 0px;
+    position: relative;
+    float: right;
+  }
+  input[type='checkbox']::before {
+    content: '';
+    
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  input[type='checkbox']::after {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: none;
+    height: 40%;
+    left: 40%;
+    position: relative;
+    top: 20%;
+    transform: rotate(45deg);
+    width: 15%;
+  }
+  input[type='checkbox']:checked {
+    background: #c3abd0;
+    border: none;
+  }
+  input[type='checkbox']:checked::after {
+    display: block;
+  }
+  .join_input2{
+   border-top:30px ; 
+  }
+  .button_box{
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .button_box>button{
+    width: 40%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 35px;
+    color: white;
+    font-family: 'Jua', sans-serif;
+    background: #c3abd0;
+  }
+/* 留ㅼ묶媛뺤궗 �떆�옉*/
+.matching_teacher{
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 30px;
+}
+.matching_box{
+	width: 50%;
+	height: 200px;
+	display:flex;
+}
+.teacher_img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.teacher_info{
+    margin-right:10px;
+    width: 50%;
+}
+.teacher_info>p{
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+/* �깉�눜�븯湲� �떆�옉*/
+.delete_info{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Jua', sans-serif;
+    background-color: #c3abd0;
+    color: white;
+}
+.join_input{
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* 媛뺤궗�젙蹂대벑濡앺븯湲�*/
+.teacher_upload{
+    width: 50%;
+    height: 700px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+textarea:focus{
+    outline: none;
+}
+.T_upload_input{
+    margin-top: 15px;
+}
+.T_upload_input>label{
+    font-family: 'Jua', sans-serif;
+    color:  #828282;
+    font-size: 30px;
+}
+.T_upload_input>input{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+}
+.T_upload_input>textarea{
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    resize: none;
+}
+.T_upload_input>input[type="file"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solod rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #828282;
+}
+input::file-selector-button{
+    display: none;
+}
+.T_upload_btn{
+    margin-top: 30px;
+    text-align: center;
+}
+.T_upload_btn>button{
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #c3abd0;
+    color: white;
+    font-family: 'Jua', sans-serif;
+    font-size: 35px;
+}
+.msg{
+	font-size :0.9235rem;
+	padding-bottom: 5px;
+	
+}
+.greenfont {
+	
+	
+	color:rgba(0, 128, 0, 0.5);
+	display:none;
+}
+.redfont{
+	
+	color:rgba(255, 0, 0, 0.6);
+	display:none;
+}
+
+
+/* tablet&mobile */
+@media all and (max-width:1050px){
+	#container{
+	    width: 80%;
+	    margin: 0 auto;
+	    position: relative;
+	    padding-bottom: 400px;
+	}
+	.btn button{
+		width: 30%;
+		height:80px;
+		font-size: 0.9rem;
+	}
+	.btn{
+		padding-top:5px;
+		width: 50%;
+	}
+	.newstu{
+		font-size:2rem;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.matching_box{
+		width: 100%;
+		height: 150px;
+	}
+	.member{
+	    width: 100%;
+	    height: 150px;
+	    display: flex;
+	    margin-top: 30px;
+	}
+	#tab1, #tab2, #tab3, #tab4{
+		width: 100%;
+	    height: 1150px;
+	    display:none;
+	    border-radius: 10px;
+	    background-color:  #ecd3ce43;
+	}
+	
+	.tab_menu .list .btn{
+	    font-family: 'Jua', sans-serif;
+	    font-size: 4vw;
+	}
+	
+	/*�쉶�썝�젙蹂댁닔�젙 */
+	.member_modify_box{
+	    width: 100%;
+	    height: 1000px;
+	    display: block;
+	    margin: 0 auto;
+	}
+	.join_modify{
+	    width: 90%;
+	    height: 50%;
+	    border-radius: 30px;
+	    margin-top: 45px;
+	    margin: 0 auto;
+	}
+	.sub_checkbox{
+	    width: 90%;
+	    height: 50%;
+	    display: flex;
+	    flex-direction: column;
+	    margin-top: 30px;
+	    margin: 0 auto;
+	}	
+	/* 留ㅼ묶媛뺤궗 �떆�옉*/
+	.matching_teacher{
+	    width: 80%;
+	    height: 15%;
+	    margin: 0 auto;
+	    display: block;
+	    padding-top: 30px;
+	}
+	.teacher_img{
+	    width: 100px;
+	    height: 100px;
+	    border: 1px solid black;
+	    border-radius: 10px;
+	}
+	.teacher_info{
+	    margin-right:10px;
+	}
+	.teacher_info p{
+		line-height:1.5;
+	    font-size: 0.8rem;
+	}
+	
+	/* �깉�눜�븯湲� �떆�옉*/
+	.delete_info{
+	    width: 80%;
+	    margin: 0 auto;
+	    padding-top: 50px;
+	}
+	/*媛뺤궗�젙蹂대벑濡�*/
+	.teacher_upload{
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+	
+	
+}
+

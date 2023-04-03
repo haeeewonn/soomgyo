@@ -1,0 +1,193 @@
+#T_find_detail_container{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.T_main_box{
+    width: 100%;
+    height: 300px;
+}
+.first_row_box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.T_profile_img{
+    width: 60%;
+    height: 90%;
+}
+.T_profile_img>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.T_profile_text{
+    width: 60%;
+    height: 90%;
+    margin-left: 35px;
+}
+.T_profile_text>p{
+    font-size: 30px;
+    line-height: 2;
+    margin: 10px;
+}
+
+.second_row_box{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub_img_box{   /* 첫번째 서브 이미지 박스*/
+    width: 48%;
+    height: 90%;
+}
+.sub_img_box>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.sub_img_list{  /* 두번째 서브 이미지 박스, 사진 4개 들어감*/
+    width: 45%;
+    height: 90%;
+    border-radius: 10px;
+
+}
+.img_first_row{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.img_sec_row{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+#images_box{
+    width: 50%;
+    height: 100%;
+}
+#images_box>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+#counsel_box{   /* 상담하기 버튼 들어있는 큰 박스*/
+    width: 50%;
+    height: 100px;
+    background-color:  #ecd3ce;
+    border-radius: 10px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.count_content{
+    width: 50%;
+    height: 100%;
+}
+.employee_font{
+    width: 100%;
+    height: 50%;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.employee_font>p{
+    margin-top: 35px;
+}
+.consel_btn_box{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.consel_btn_box>button{
+    width: 70%;
+    height: 50%;
+    background-color: #c3abd0;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 30px;
+    color: white;
+    animation: blink-effect 1s step-end infinite;
+}
+@keyframes blink-effect {
+    50%{
+        opacity:0;
+    }
+}
+#T_info_box{
+    clear: both;
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+}
+.T_info_first_box{
+    width: 100%;
+    height: 50%;
+}
+.T_info_second_box{
+    width: 100%;
+    height: 50%;
+}
+.teacher_info_font, .survice_detail_font{
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.228);
+    font-size: 45px;
+}
+.teacher_infomation_text, .survice_detail_text{
+    width: 100%;
+    height: 85%;
+    font-size: 18px;
+}
+.teacher_infomation_text>p, .survice_detail_text>p{
+    margin-top: 10px;
+}
+
+/* tablet&mobile버전 */
+@media all and (max-width:1050px){
+    #T_find_detail_container{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    .T_main_box{
+        width: 100%;
+        height: 300px;
+    }
+    .T_profile_img{
+        width: 30%;
+        height: 90%;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .T_profile_text{
+        width: 70%;
+        height: 90%;
+        margin-left: 10px;
+    }
+    .second_row_box{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #counsel_box{   /* 상담하기 버튼 들어있는 큰 박스*/
+        width: 100%;
+        height: 100px;
+        background-color:  #ecd3ce;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

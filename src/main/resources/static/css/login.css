@@ -1,0 +1,121 @@
+
+
+.login_h1{
+    color: #c3abd0;
+    font-size: 48px;
+    letter-spacing: 5px; /* 글자 사이 간격*/
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    
+}
+
+input::placeholder{
+    color: #c9c4c4;
+}
+.id_box, .pwd_box{
+    padding-bottom: 20px;
+}
+
+.sub_menu{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.sub_menu a{
+    color: #828282b9;
+}
+.sub_menu ul a:visited{
+    color: #828282;
+}
+.sub_menu>ul>li:last-child{
+    padding-top: 3px;
+}
+
+#login_container{
+	padding:200px 0;
+	height:400px;
+	background: #ecd3ce1c;
+	
+
+}
+#valid{
+	font-size: 0.8rem;
+	color:rgba(255, 0, 0, 0.6);
+	padding-top: 10px;
+
+}
+
+/* pc버전 */
+@media all and (min-width:1024px){
+    #login_container{
+        width: 100%;
+        margin: 0 auto;
+      
+        text-align: center;
+    }
+.id_box input[type=text],.pwd_box input[type=password]{
+        width: 30%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'Jua', sans-serif; 
+        background-color: #eeeaea;
+        text-align: center;
+    }
+.login_box input[type=submit]{
+        width: 30%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: #c3abd0;
+        font-family: 'Jua', sans-serif;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .sub_menu{
+        width: 30%;
+        margin: 0 auto;
+        
+    }
+}
+
+
+/* 모바일버전 */
+@media all and (max-width:1023px){
+    #login_container{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+.id_box input[type=text],.pwd_box input[type=password]{
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'Jua', sans-serif; 
+        background-color: #eeeaea;
+        text-align: center;
+    }
+.login_box input[type=submit]{
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: #c3abd0;
+        font-family: 'Jua', sans-serif;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .sub_menu{
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+}

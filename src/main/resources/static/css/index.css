@@ -1,0 +1,252 @@
+#banner_image_cotainer{
+    width: 100%;
+    margin-bottom:30px;
+    
+}
+.banner_img>img{
+    width: 100%;
+}
+/*�꽴占쏙옙�졃占쎈짗占쎌겫占쎄맒 占쎈뻻占쎌삂*/
+#container {
+    width: 80%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+h3{
+    font-family: 'Jua', sans-serif;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.ptag{
+	white-space: no-wrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+#related_video {
+    width: 100%;
+    height: 500px;
+    margin-top:50px;
+    margin-bottom: 10px;
+}
+.related_video-font {
+    width: 100%;
+    height: 30px; 
+    margin-bottom: 10px; 
+}
+.related_video_big-box {
+    width: 100%;
+    height: 470px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+.video-box {
+    width: 30%;
+    height: 45%;
+    margin-bottom:100px;
+}
+.youtube {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.youbube-title img{
+	width: 30px;
+	height:30px;
+}
+.youbube-title{
+	display: block;
+	width:100%;
+	height:55px;
+	font-size:1.5rem;
+    margin-top: 10px;
+    	white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 100%;
+}
+.youtube img {
+	width: 100%;
+	height: 100%;
+}
+/*�꽴臾롰��*/
+#container2{
+    width: 100%;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+#ad{
+    padding-bottom: 30px;
+}
+#ad>img{
+    width: 100%;
+    margin-top:100px;
+}
+/*揶쏅벡沅쀯㎕�뼐由곈겫占쏙옙苑� 占쎈뻻占쎌삂*/
+#container3 {
+    width: 80%;
+    padding-top: 10px;
+    margin: 0 auto;
+   
+}
+#find_teacher {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+.find_teacher-font{
+    width: 100%;
+    height: 30px; 
+    margin-bottom: 10px; 
+}
+.find_teacher_bog-box{
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.find_teacher_bog-box>a{
+	display: inline;
+	width: 30%;
+    height: 100%;
+}
+.teacher-box {
+    width: 100%;
+    height: 100%;
+}
+.teacher{
+    width: 100%;
+    height: 90%;
+}
+.teacher>img{
+	width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+.teacher-title{
+    width: 100%;
+    height: 10%;
+}
+.teacher-title>p{
+    margin-top: 8px;
+}
+
+/* �뚣끇占썬끇�빍占쎈뼒*/
+.community-font-box{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+}
+.notice-font-box {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.fa-plus{
+    font-size: 20px;
+}
+.board-box{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+.board-detail-box{
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+.category{
+    width: 20%;
+    height: 100%;
+}
+.category>p{
+    margin-top: 35px;
+    text-align: center;
+}
+.content-box{
+    width: 80%;
+    height: 100%;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    height: 50%;
+    padding-top: 20px;
+}
+.order{
+    width: 20%;
+    height: 100%;
+}
+.order>p{
+    margin-top: 35px;
+    text-align: center;
+}
+/* pc甕곌쑴�읈 */
+@media all and (min-width:760px){
+    #final {
+        width: 100%;
+        height: 400px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .community-box {
+        width: 45%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .notice-box{
+        width: 45%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+/* 筌뤴뫀而�占쎌뵬甕곌쑴�읈 */
+@media all and (max-width:759px){
+	#banner_image_cotainer{
+
+    margin-bottom:0px;
+    
+}
+    #final {
+        width: 100%;
+        height: 400px;
+        margin-top: 40px;
+    }
+    .community-box {
+        width: 100%;
+        height: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+    }
+    .notice-box{
+        width: 100%;
+        height: 100%;
+    }
+    #container2{
+
+    margin-top:30px;
+    margin-bottom:30px;
+	}
+	#container {
+	
+	    padding-top: 0px;
+	 
+	}
+}

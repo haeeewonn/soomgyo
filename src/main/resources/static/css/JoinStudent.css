@@ -1,0 +1,307 @@
+
+body{
+    background: #ecd3ce1c;
+     
+
+}
+#container1 {
+	padding-top: 100px;
+}
+#container2 {
+    display: none;
+    text-align: center;
+}
+.sub_checkbox{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+.sub_checkbox label{
+    width: 90%;
+    cursor: pointer;
+    
+}
+.sub_checkbox_box{
+    margin: 20px;
+    border-bottom: solid #828282 ;
+    padding: 15px 0;
+    cursor: pointer;
+    
+    
+}
+
+
+/*泥댄겕諛뺤뒪 css*/
+input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    outline: 0;
+    width: 20px;
+    border: 1px solid #bebfc5;
+    border-radius: 0px;
+    position: relative;
+    float: right;
+  }
+  input[type='checkbox']::before {
+    content: '';
+    
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  input[type='checkbox']::after {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: none;
+    height: 40%;
+    left: 40%;
+    position: relative;
+    top: 20%;
+    transform: rotate(45deg);
+    width: 15%;
+  }
+  input[type='checkbox']:checked {
+    background: #c3abd0;
+    border: none;
+  }
+  input[type='checkbox']:checked::after {
+    display: block;
+  }
+  .join_input2{
+   border-top:30px ; 
+  }
+.join_h1_padding{
+	padding-top:50px;
+}
+
+h1{
+	
+    color: #ecd3ce;
+    font-size: 48px;
+    letter-spacing: 5px; 
+    text-align: center;
+    padding-bottom: 20px;
+}
+span{
+	 color: #828282;
+    font-size: 20px;
+    
+}
+.join_input>input[type=text],.join_input>input[type=email],.join_input>input[type=password] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Jua', sans-serif;
+    background-color: #eeeaea;
+    margin-top:10px;
+}
+input::placeholder{
+    color: #c9c4c4;
+}
+
+label{
+    float: left;
+    color: #828282;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.join_input>input[type=submit], .join_input2>input[type=submit]{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ecd3ce;
+    font-family: 'Jua', sans-serif;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.join_input {
+    position: relative;
+  }
+.join_input button {
+    width: 17%;
+    border: none;
+    background-color: #eeeaea ;
+    color: #828282;
+	font-size:1rem;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    cursor: pointer;
+ }
+ .join_input .send_mail2{
+ 	width: 17%;
+    border: none;
+    background-color: #eeeaea ;
+    color: #828282;
+	font-size:1rem;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    cursor: pointer;
+ }
+#ck_num{
+    display: none;
+}
+#ck_id{
+    display: none;
+}
+.atag_color a{
+    color: #828282;
+   
+}
+  #join_student_container2{
+        width: 80%;
+        margin: 0 auto;
+    
+  
+        
+    }
+.msg{
+	font-size :0.9235rem;
+	padding-bottom: 5px;
+	
+}
+#mail-check-span{
+	font-size :0.9235rem;
+	padding-bottom: 5px;
+	color:rgba(255, 0, 0, 0.6);
+}
+.greenfont {
+	
+	
+	color:rgba(0, 128, 0, 0.5);
+	display:none;
+}
+.redfont{
+	
+	color:rgba(255, 0, 0, 0.6);
+	display:none;
+}
+.lock{
+	width: 27px;
+	position: absolute;
+	top:45px;
+	right:5px;
+	display:none;
+}
+#timer2{
+	font-size: 1rem;
+	color:#828282;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	width: 17%;
+	
+}
+#timer{
+	font-size: 1rem;
+	color:#828282;
+	position: absolute;
+	top: 111px;
+	right: 0px;
+	width: 17%;
+}
+   #join_student_container{
+        width: 80%;
+        margin: 0 auto;
+        text-align:center;
+        
+
+        padding-top:200px;
+        
+    }
+    #email_box,#re_password{
+    	display:none;
+    }
+@media all and (min-width:1024px) {
+ 
+    .join_input{
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+  	.join_input2{
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+    
+}
+
+
+@media all and (max-width:1023px) {
+	  #join_student_container2{
+        width: 100%;
+       
+        
+    }
+    #join_student_container{
+        width: 100%;
+        margin: 0 auto;
+
+         padding-top:100px;
+        
+    }
+    .join_input{
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+      .join_input button {
+	    width: 17%;
+	    color: #828282;
+		font-size:1rem;
+	    position: absolute;
+	    top: 50px;
+	    right: 0px;
+	    cursor: pointer;
+	  }
+	#timer{
+		right: 0px;
+		width: 18%;
+	}
+	.join_input2{
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+    .sub_checkbox{
+        margin-bottom: 30px;
+        width: 80%;
+
+    }
+    .sub_checkbox label{
+        width: 80%; 
+    }
+    .sub_checkbox_box{
+        
+        border-bottom: solid #828282 ;
+        padding: 10px 0;
+     
+
+        
+    }
+    #container1 {
+	padding-top: 50px;
+}
+	
+}
