@@ -12,8 +12,8 @@
 - 홍기완 : 회원가입, 로그인, 관련동영상, 내 강의실, 채팅
 
 ### ⚙️ 개발 환경
-- `Java JDK 1.8.0`
-- **Framework** : Springboot(2.x)
+- `Java JDK 1.8`
+- **Framework** : Springboot(5.x)
 - **Database** : Oracle DB(11xe)
 
 ## 🎞 시연 영상
